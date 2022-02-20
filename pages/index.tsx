@@ -27,19 +27,16 @@ const Home = () => {
       </h1>
       <div className="grid grid-flow-col gap-5 text-xl">
 
-        <button onClick={() => setShowElement('diatomic-nonmetal')} className="font-semibold text-blue-500 hover:underline transition-all">Diatomic Nonmetal</button>
-        <button onClick={() => setShowElement('alkali-metal')} className="font-semibold text-cyan-500 hover:underline transition-all">Alkali</button>
-        <button onClick={() => setShowElement('alkaline-earth-metal')} className="font-semibold text-green-500 hover:underline transition-all">Alkaline Earth</button>
-        <button onClick={() => setShowElement('transition-metal')} className="font-semibold text-orange-500 hover:underline transition-all">Transition</button>
-        <button onClick={() => setShowElement('post-transition-metal')} className="font-semibold text-red-500 hover:underline transition-all">Post Transition</button>
-        <button onClick={() => setShowElement('metalloid')} className="font-semibold text-yellow-500 hover:underline transition-all">Metalloid</button>
-        <button onClick={() => setShowElement('polyatomic-nonmetal')} className="font-semibold text-purple-500 hover:underline transition-all">Polyatomic Nonmetal</button>
-        <button onClick={() => setShowElement('noble-gas')} className="font-semibold text-pink-500 hover:underline transition-all">Noble Gases</button>
-        <button onClick={() => setShowElement('lanthanide')} className="font-semibold text-indigo-500 hover:underline transition-all">Lanthanides</button>
-        <button onClick={() => setShowElement('actinide')} className="font-semibold text-teal-500 hover:underline transition-all">Actinides</button>
-        <button onClick={() => setShowElement('unknown')} className="font-semibold text-gray-500 hover:underline transition-all">Unknown</button>
-
-        
+        <button onClick={() => setShowElement(showElement !== 'diatomic-nonmetal' ? 'diatomic-nonmetal' : "all")} className={`font-medium ${showElement == 'diatomic-nonmetal' ? "text-white p-2 bg-blue-500 rounded" : "text-blue-500"} hover:underline transition-all`}>Diatomic Nonmetal</button>
+        <button onClick={() => setShowElement(showElement !== 'alkali-metal' ? 'alkali-metal' : "all")} className={`font-medium ${showElement == 'alkali-metal' ? "text-white p-2 bg-cyan-500 rounded" : "text-cyan-500"} hover:underline transition-all`}>Alkali</button>
+        <button onClick={() => setShowElement(showElement !== 'alkaline-earth-metal' ? 'alkaline-earth-metal' : "all")} className={`font-medium ${showElement == 'alkaline-earth-metal' ? "text-white p-2 bg-green-500 rounded" : "text-green-500"} hover:underline transition-all`}>Alkaline Earth</button>
+        <button onClick={() => setShowElement(showElement !== 'transition-metal' ? 'transition-metal' : "all")} className={`font-medium ${showElement == 'transition-metal' ? "text-white p-2 bg-orange-500 rounded" : "text-orange-500"} hover:underline transition-all`}>Transition</button>
+        <button onClick={() => setShowElement(showElement !== 'post-transition-metal' ? 'post-transition-metal' : "all")} className={`font-medium ${showElement == 'post-transition-metal' ? "text-white p-2 bg-red-500 rounded" : "text-red-500"} hover:underline transition-all`}>Post Transition</button>
+        <button onClick={() => setShowElement(showElement !== 'metalloid' ? 'metalloid' : "all")} className={`font-medium ${showElement == 'metalloid' ? "text-white p-2 bg-yellow-500 rounded" : "text-yellow-500"} hover:underline transition-all`}>Metalloid</button>
+        <button onClick={() => setShowElement(showElement !== 'polyatomic-nonmetal' ? 'polyatomic-nonmetal' : "all")} className={`font-medium ${showElement == 'polyatomic-nonmetal' ? "text-white p-2 bg-purple-500 rounded" : "text-purple-500"} hover:underline transition-all`}>Polyatomic Nonmetal</button>
+        <button onClick={() => setShowElement(showElement !== 'noble-gas' ? 'noble-gas' : "all")} className={`font-medium ${showElement == 'noble-gas' ? "text-white p-2 bg-pink-500 rounded" : "text-pink-500"} hover:underline transition-all`}>Noble Gases</button>
+        <button onClick={() => setShowElement(showElement !== 'lanthanide' ? 'lanthanide' : "all")} className={`font-medium ${showElement == 'lanthanide' ? "text-white p-2 bg-indigo-500 rounded" : "text-indigo-500"} hover:underline transition-all`}>Lanthanides</button>
+        <button onClick={() => setShowElement(showElement !== 'actinide' ? 'actinide' : "all")} className={`font-medium ${showElement == 'actinide' ? "text-white p-2 bg-teal-500 rounded" : "text-teal-500"} hover:underline transition-all`}>Actinides</button>
 
       </div>
       <div className="my-12">
