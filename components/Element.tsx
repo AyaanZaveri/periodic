@@ -20,6 +20,10 @@ const Element = ({
     <div
       id={name}
       className={`grid ${category.replace(/\s/g , "-").replace(/,/g, ' ')} h-[4.5rem] w-16 cursor-pointer grid-rows-3 rounded shadow-2xl ring-2 ring-offset-2 transition-all`}
+      style={{
+        gridColumn: xpos,
+        gridRow: ypos,
+      }}
     >
       <span className="ml-1 text-sm">{number}</span>
       <span className="grid place-content-center text-2xl">{symbol}</span>
