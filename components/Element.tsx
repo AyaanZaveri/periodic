@@ -8,6 +8,7 @@ const Element = ({
   xpos,
   ypos,
   summary,
+  showElement,
 }: {
   number: number
   symbol: string
@@ -16,16 +17,13 @@ const Element = ({
   xpos: number
   ypos: number
   summary: string
+  showElement: string
 }) => {
+  const categoryFixed = category.replace(/\s/g, '-').replace(/,/g, ' ')
   return (
     <div
       id={name}
-      className={`grid ${category
-        .replace(/\s/g, '-')
-        .replace(
-          /,/g,
-          ' '
-        )} h-16 w-16 cursor-pointer grid-rows-3 rounded-sm px-1 shadow-2xl ring-2 ring-offset-2 transition-all`}
+      className={`grid ${categoryFixed} h-16 w-16 cursor-pointer grid-rows-3 rounded-sm px-1 shadow-2xl ring-2 ring-offset-2 transition-all`}
       style={{
         gridColumn: xpos,
         gridRow: ypos,
