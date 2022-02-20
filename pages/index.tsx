@@ -170,7 +170,7 @@ const Home = () => {
           className="grid grid-flow-row flex-wrap place-content-start"
           style={{
             gridTemplateColumns: 'repeat(auto-fit, minmax(18, 1fr))',
-            gridGap: '1rem',
+            gridGap: '0.8rem',
           }}
         >
           {elementData?.map((element: any) => (
