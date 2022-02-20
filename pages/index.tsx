@@ -24,7 +24,7 @@ const Home = () => {
       <h1 className="m-8 text-3xl font-semibold text-slate-600">
         Periodic Table of Elements
       </h1>
-      <div className="grid grid-flow-col gap-3 text-xl">
+      <div className="grid grid-flow-col gap-5 text-xl">
         <a href='https://en.wikipedia.org/wiki/Nonmetal' target="_blank"><span className="font-semibold text-blue-500 hover:underline transition-all">Diatomic Nonmetals</span></a>
         <a href='https://en.wikipedia.org/wiki/Alkali' target="_blank"><span className="font-semibold text-cyan-500 hover:underline transition-all">Alkali</span></a>
         <a href='https://en.wikipedia.org/wiki/Alkaline_earth_metal' target="_blank"><span className="font-semibold text-green-500 hover:underline transition-all">Alkaline Earth</span></a>
