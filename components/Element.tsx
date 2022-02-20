@@ -23,7 +23,13 @@ const Element = ({
   return (
     <div
       id={name}
-      className={`grid ${showElement == "all" ? categoryFixed : showElement == categoryFixed ? categoryFixed : "unknown"} h-16 w-16 cursor-pointer grid-rows-3 rounded-sm px-1 shadow-2xl ring-2 ring-offset-2 transition-all`}
+      className={`grid ${
+        showElement == 'all'
+          ? categoryFixed
+          : showElement == categoryFixed
+          ? categoryFixed
+          : 'unknown'
+      } h-16 w-16 cursor-pointer grid-rows-3 rounded-sm px-1 shadow-2xl ring-2 ring-offset-2 transition-all`}
       style={{
         gridColumn: xpos,
         gridRow: ypos,

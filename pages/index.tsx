@@ -26,18 +26,144 @@ const Home = () => {
         Periodic Table of Elements
       </h1>
       <div className="grid grid-flow-col gap-5 text-xl">
-
-        <button onClick={() => setShowElement(showElement !== 'diatomic-nonmetal' ? 'diatomic-nonmetal' : "all")} className={`font-medium ${showElement == 'diatomic-nonmetal' ? "text-white p-2 bg-blue-500 rounded" : "text-blue-500"} hover:underline transition-all`}>Diatomic Nonmetal</button>
-        <button onClick={() => setShowElement(showElement !== 'alkali-metal' ? 'alkali-metal' : "all")} className={`font-medium ${showElement == 'alkali-metal' ? "text-white p-2 bg-cyan-500 rounded" : "text-cyan-500"} hover:underline transition-all`}>Alkali</button>
-        <button onClick={() => setShowElement(showElement !== 'alkaline-earth-metal' ? 'alkaline-earth-metal' : "all")} className={`font-medium ${showElement == 'alkaline-earth-metal' ? "text-white p-2 bg-green-500 rounded" : "text-green-500"} hover:underline transition-all`}>Alkaline Earth</button>
-        <button onClick={() => setShowElement(showElement !== 'transition-metal' ? 'transition-metal' : "all")} className={`font-medium ${showElement == 'transition-metal' ? "text-white p-2 bg-orange-500 rounded" : "text-orange-500"} hover:underline transition-all`}>Transition</button>
-        <button onClick={() => setShowElement(showElement !== 'post-transition-metal' ? 'post-transition-metal' : "all")} className={`font-medium ${showElement == 'post-transition-metal' ? "text-white p-2 bg-red-500 rounded" : "text-red-500"} hover:underline transition-all`}>Post Transition</button>
-        <button onClick={() => setShowElement(showElement !== 'metalloid' ? 'metalloid' : "all")} className={`font-medium ${showElement == 'metalloid' ? "text-white p-2 bg-yellow-500 rounded" : "text-yellow-500"} hover:underline transition-all`}>Metalloid</button>
-        <button onClick={() => setShowElement(showElement !== 'polyatomic-nonmetal' ? 'polyatomic-nonmetal' : "all")} className={`font-medium ${showElement == 'polyatomic-nonmetal' ? "text-white p-2 bg-purple-500 rounded" : "text-purple-500"} hover:underline transition-all`}>Polyatomic Nonmetal</button>
-        <button onClick={() => setShowElement(showElement !== 'noble-gas' ? 'noble-gas' : "all")} className={`font-medium ${showElement == 'noble-gas' ? "text-white p-2 bg-pink-500 rounded" : "text-pink-500"} hover:underline transition-all`}>Noble Gases</button>
-        <button onClick={() => setShowElement(showElement !== 'lanthanide' ? 'lanthanide' : "all")} className={`font-medium ${showElement == 'lanthanide' ? "text-white p-2 bg-indigo-500 rounded" : "text-indigo-500"} hover:underline transition-all`}>Lanthanides</button>
-        <button onClick={() => setShowElement(showElement !== 'actinide' ? 'actinide' : "all")} className={`font-medium ${showElement == 'actinide' ? "text-white p-2 bg-teal-500 rounded" : "text-teal-500"} hover:underline transition-all`}>Actinides</button>
-
+        <button
+          onClick={() =>
+            setShowElement(
+              showElement !== 'diatomic-nonmetal' ? 'diatomic-nonmetal' : 'all'
+            )
+          }
+          className={`font-medium ${
+            showElement == 'diatomic-nonmetal'
+              ? 'rounded bg-blue-500 p-2 text-white'
+              : 'text-blue-500'
+          } transition-all hover:underline`}
+        >
+          Diatomic Nonmetal
+        </button>
+        <button
+          onClick={() =>
+            setShowElement(
+              showElement !== 'alkali-metal' ? 'alkali-metal' : 'all'
+            )
+          }
+          className={`font-medium ${
+            showElement == 'alkali-metal'
+              ? 'rounded bg-cyan-500 p-2 text-white'
+              : 'text-cyan-500'
+          } transition-all hover:underline`}
+        >
+          Alkali
+        </button>
+        <button
+          onClick={() =>
+            setShowElement(
+              showElement !== 'alkaline-earth-metal'
+                ? 'alkaline-earth-metal'
+                : 'all'
+            )
+          }
+          className={`font-medium ${
+            showElement == 'alkaline-earth-metal'
+              ? 'rounded bg-green-500 p-2 text-white'
+              : 'text-green-500'
+          } transition-all hover:underline`}
+        >
+          Alkaline Earth
+        </button>
+        <button
+          onClick={() =>
+            setShowElement(
+              showElement !== 'transition-metal' ? 'transition-metal' : 'all'
+            )
+          }
+          className={`font-medium ${
+            showElement == 'transition-metal'
+              ? 'rounded bg-orange-500 p-2 text-white'
+              : 'text-orange-500'
+          } transition-all hover:underline`}
+        >
+          Transition
+        </button>
+        <button
+          onClick={() =>
+            setShowElement(
+              showElement !== 'post-transition-metal'
+                ? 'post-transition-metal'
+                : 'all'
+            )
+          }
+          className={`font-medium ${
+            showElement == 'post-transition-metal'
+              ? 'rounded bg-red-500 p-2 text-white'
+              : 'text-red-500'
+          } transition-all hover:underline`}
+        >
+          Post Transition
+        </button>
+        <button
+          onClick={() =>
+            setShowElement(showElement !== 'metalloid' ? 'metalloid' : 'all')
+          }
+          className={`font-medium ${
+            showElement == 'metalloid'
+              ? 'rounded bg-yellow-500 p-2 text-white'
+              : 'text-yellow-500'
+          } transition-all hover:underline`}
+        >
+          Metalloid
+        </button>
+        <button
+          onClick={() =>
+            setShowElement(
+              showElement !== 'polyatomic-nonmetal'
+                ? 'polyatomic-nonmetal'
+                : 'all'
+            )
+          }
+          className={`font-medium ${
+            showElement == 'polyatomic-nonmetal'
+              ? 'rounded bg-purple-500 p-2 text-white'
+              : 'text-purple-500'
+          } transition-all hover:underline`}
+        >
+          Polyatomic Nonmetal
+        </button>
+        <button
+          onClick={() =>
+            setShowElement(showElement !== 'noble-gas' ? 'noble-gas' : 'all')
+          }
+          className={`font-medium ${
+            showElement == 'noble-gas'
+              ? 'rounded bg-pink-500 p-2 text-white'
+              : 'text-pink-500'
+          } transition-all hover:underline`}
+        >
+          Noble Gases
+        </button>
+        <button
+          onClick={() =>
+            setShowElement(showElement !== 'lanthanide' ? 'lanthanide' : 'all')
+          }
+          className={`font-medium ${
+            showElement == 'lanthanide'
+              ? 'rounded bg-indigo-500 p-2 text-white'
+              : 'text-indigo-500'
+          } transition-all hover:underline`}
+        >
+          Lanthanides
+        </button>
+        <button
+          onClick={() =>
+            setShowElement(showElement !== 'actinide' ? 'actinide' : 'all')
+          }
+          className={`font-medium ${
+            showElement == 'actinide'
+              ? 'rounded bg-teal-500 p-2 text-white'
+              : 'text-teal-500'
+          } transition-all hover:underline`}
+        >
+          Actinides
+        </button>
       </div>
       <div className="my-12">
         <div
