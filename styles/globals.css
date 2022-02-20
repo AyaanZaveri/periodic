@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.diatomic-nonmetal {
+    @apply text-blue-600 bg-blue-100 ring-blue-400 hover:ring-blue-600;
+}
+
+.alkali-metal {
+    @apply text-cyan-600 bg-cyan-100 ring-cyan-400 hover:ring-cyan-600;
+}
+
+.alkaline-earth-metal {
+    @apply text-green-600 bg-green-100 ring-green-400 hover:ring-green-600;
+}
+
+.transition-metal {
+    @apply text-orange-600 bg-orange-100 ring-orange-400 hover:ring-orange-600;
+}
+
+.post-transition-metal {
+    @apply text-red-600 bg-red-100 ring-red-400 hover:ring-red-600;
+}
+
+.metalloid {
+    @apply text-yellow-600 bg-yellow-100 ring-yellow-400 hover:ring-yellow-600;
+}
+
+.polyatomic-nonmetal {
+    @apply text-purple-600 bg-purple-100 ring-purple-400 hover:ring-purple-600;
+}
+
+.noble-gas {
+    @apply text-pink-600 bg-pink-100 ring-pink-400 hover:ring-pink-600;
+}
+
+.lanthanide {
+    @apply text-indigo-600 bg-indigo-100 ring-indigo-400 hover:ring-indigo-600;
+}
+
+.actinide {
+    @apply text-teal-600 bg-teal-100 ring-teal-400 hover:ring-teal-600;
+}
+
+.unknown {
+    @apply text-gray-600 bg-gray-100 ring-gray-400 hover:ring-gray-600;
+}
