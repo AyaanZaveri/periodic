@@ -28,7 +28,8 @@ const Home = () => {
         <div
           className="grid grid-flow-row flex-wrap place-content-start gap-4"
           style={{
-            gridTemplateColumns: 'repeat(18, minmax(0, 1fr))',
+            gridTemplateColumns: "repeat(auto-fit, minmax(18, 1fr))",
+            gridGap: "1rem",
           }}
         >
           {elementData?.map((element: any) => (
