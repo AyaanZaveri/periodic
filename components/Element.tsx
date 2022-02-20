@@ -19,7 +19,7 @@ const Element = ({
   return (
     <div
       id={name}
-      className={`grid ${category.replace(/\s/g , "-").replace(/,/g, ' ')} h-[4.5rem] w-[4.5rem] px-1 cursor-pointer grid-rows-3 rounded-sm shadow-2xl ring-2 ring-offset-2 transition-all`}
+      className={`grid ${category.replace(/\s/g , "-").replace(/,/g, ' ')} h-16 w-16 px-1 cursor-pointer grid-rows-3 rounded-sm shadow-2xl ring-2 ring-offset-2 transition-all`}
       style={{
         gridColumn: xpos,
         gridRow: ypos,

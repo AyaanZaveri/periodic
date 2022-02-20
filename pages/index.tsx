@@ -20,13 +20,13 @@ const Home = () => {
   console.log(elementData)
 
   return (
-    <div>
-      <h1 className="m-8 grid place-items-center text-3xl font-semibold text-slate-600">
+    <div className='grid place-items-center'>
+      <h1 className="m-8 text-3xl font-semibold text-slate-600">
         Periodic Table of Elements
       </h1>
-      <div className="mx-8 my-12">
+      <div className="my-12">
         <div
-          className="grid grid-flow-row flex-wrap place-content-start gap-4"
+          className="grid grid-flow-row flex-wrap place-content-start"
           style={{
             gridTemplateColumns: "repeat(auto-fit, minmax(18, 1fr))",
             gridGap: "1rem",
