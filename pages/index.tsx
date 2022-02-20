@@ -54,6 +54,7 @@ const Home = () => {
               category={element.category}
               xpos={element.xpos}
               ypos={element.ypos}
+              summary={element.summary}
             />
           ))}
         </div>

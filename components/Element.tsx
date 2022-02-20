@@ -7,6 +7,7 @@ const Element = ({
   category,
   xpos,
   ypos,
+  summary,
 }: {
   number: number
   symbol: string
@@ -14,12 +15,17 @@ const Element = ({
   category: string
   xpos: number
   ypos: number
+  summary: string
 }) => {
-
   return (
     <div
       id={name}
-      className={`grid ${category.replace(/\s/g , "-").replace(/,/g, ' ')} h-16 w-16 px-1 cursor-pointer grid-rows-3 rounded-sm shadow-2xl ring-2 ring-offset-2 transition-all`}
+      className={`grid ${category
+        .replace(/\s/g, '-')
+        .replace(
+          /,/g,
+          ' '
+        )} h-16 w-16 cursor-pointer grid-rows-3 rounded-sm px-1 shadow-2xl ring-2 ring-offset-2 transition-all`}
       style={{
         gridColumn: xpos,
         gridRow: ypos,
@@ -27,9 +33,14 @@ const Element = ({
     >
       <span className="text-sm">{number}</span>
       <span className="grid place-content-center text-2xl">{symbol}</span>
-      <span className="grid text-[0.5rem] m-0.5" style={{
-          placeItems: "end start",
-      }}>{name}</span>
+      <span
+        className="m-0.5 grid text-[0.5rem]"
+        style={{
+          placeItems: 'end start',
+        }}
+      >
+        {name}
+      </span>
     </div>
   )
 }
