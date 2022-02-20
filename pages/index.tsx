@@ -27,11 +27,11 @@ const Home = () => {
       </h1>
       <div className="grid grid-flow-col gap-5 text-xl">
 
-        <button onClick={() => setShowElement('diatomic-nonmetal')} className="font-semibold hover:underline transition-all">Diatomic Nonmetal</button>
-        <button onClick={() => setShowElement('alkali')} className="font-semibold text-cyan-500 hover:underline transition-all">Alkali</button>
-        <button onClick={() => setShowElement('alkaline-earth')} className="font-semibold text-green-500 hover:underline transition-all">Alkaline Earth</button>
-        <button onClick={() => setShowElement('transition')} className="font-semibold text-orange-500 hover:underline transition-all">Transition</button>
-        <button onClick={() => setShowElement('post-transition')} className="font-semibold text-red-500 hover:underline transition-all">Post Transition</button>
+        <button onClick={() => setShowElement('diatomic-nonmetal')} className="font-semibold text-blue-500 hover:underline transition-all">Diatomic Nonmetal</button>
+        <button onClick={() => setShowElement('alkali-metal')} className="font-semibold text-cyan-500 hover:underline transition-all">Alkali</button>
+        <button onClick={() => setShowElement('alkaline-earth-metal')} className="font-semibold text-green-500 hover:underline transition-all">Alkaline Earth</button>
+        <button onClick={() => setShowElement('transition-metal')} className="font-semibold text-orange-500 hover:underline transition-all">Transition</button>
+        <button onClick={() => setShowElement('post-transition-metal')} className="font-semibold text-red-500 hover:underline transition-all">Post Transition</button>
         <button onClick={() => setShowElement('metalloid')} className="font-semibold text-yellow-500 hover:underline transition-all">Metalloid</button>
         <button onClick={() => setShowElement('polyatomic-nonmetal')} className="font-semibold text-purple-500 hover:underline transition-all">Polyatomic Nonmetal</button>
         <button onClick={() => setShowElement('noble-gas')} className="font-semibold text-pink-500 hover:underline transition-all">Noble Gases</button>
