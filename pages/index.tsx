@@ -32,7 +32,7 @@ const Home = () => {
               showElement !== 'diatomic-nonmetal' ? 'diatomic-nonmetal' : 'all'
             )
           }
-          className={`font-medium ${
+          className={`font-medium text-lg ${
             showElement == 'diatomic-nonmetal'
               ? 'rounded bg-blue-500 p-2 text-white'
               : 'text-blue-500'
@@ -46,7 +46,7 @@ const Home = () => {
               showElement !== 'alkali-metal' ? 'alkali-metal' : 'all'
             )
           }
-          className={`font-medium ${
+          className={`font-medium text-lg ${
             showElement == 'alkali-metal'
               ? 'rounded bg-cyan-500 p-2 text-white'
               : 'text-cyan-500'
@@ -62,7 +62,7 @@ const Home = () => {
                 : 'all'
             )
           }
-          className={`font-medium ${
+          className={`font-medium text-lg ${
             showElement == 'alkaline-earth-metal'
               ? 'rounded bg-green-500 p-2 text-white'
               : 'text-green-500'
@@ -76,7 +76,7 @@ const Home = () => {
               showElement !== 'transition-metal' ? 'transition-metal' : 'all'
             )
           }
-          className={`font-medium ${
+          className={`font-medium text-lg ${
             showElement == 'transition-metal'
               ? 'rounded bg-orange-500 p-2 text-white'
               : 'text-orange-500'
@@ -92,7 +92,7 @@ const Home = () => {
                 : 'all'
             )
           }
-          className={`font-medium ${
+          className={`font-medium text-lg ${
             showElement == 'post-transition-metal'
               ? 'rounded bg-red-500 p-2 text-white'
               : 'text-red-500'
@@ -104,7 +104,7 @@ const Home = () => {
           onClick={() =>
             setShowElement(showElement !== 'metalloid' ? 'metalloid' : 'all')
           }
-          className={`font-medium ${
+          className={`font-medium text-lg text-lg ${
             showElement == 'metalloid'
               ? 'rounded bg-yellow-500 p-2 text-white'
               : 'text-yellow-500'
@@ -120,7 +120,7 @@ const Home = () => {
                 : 'all'
             )
           }
-          className={`font-medium ${
+          className={`font-medium text-lg ${
             showElement == 'polyatomic-nonmetal'
               ? 'rounded bg-purple-500 p-2 text-white'
               : 'text-purple-500'
@@ -132,7 +132,7 @@ const Home = () => {
           onClick={() =>
             setShowElement(showElement !== 'noble-gas' ? 'noble-gas' : 'all')
           }
-          className={`font-medium ${
+          className={`font-medium text-lg ${
             showElement == 'noble-gas'
               ? 'rounded bg-pink-500 p-2 text-white'
               : 'text-pink-500'
@@ -144,7 +144,7 @@ const Home = () => {
           onClick={() =>
             setShowElement(showElement !== 'lanthanide' ? 'lanthanide' : 'all')
           }
-          className={`font-medium ${
+          className={`font-medium text-lg ${
             showElement == 'lanthanide'
               ? 'rounded bg-indigo-500 p-2 text-white'
               : 'text-indigo-500'
@@ -156,7 +156,7 @@ const Home = () => {
           onClick={() =>
             setShowElement(showElement !== 'actinide' ? 'actinide' : 'all')
           }
-          className={`font-medium ${
+          className={`font-medium text-lg ${
             showElement == 'actinide'
               ? 'rounded bg-teal-500 p-2 text-white'
               : 'text-teal-500'
