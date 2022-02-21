@@ -185,6 +185,12 @@ const Home = () => {
               ypos={element.ypos}
               summary={element.summary}
               showElement={showElement}
+              atomic_mass={element.atomic_mass}
+              boil={element.boil}
+              density={element.density}
+              melt={element.melt}
+              molar_heat={element.molar_heat}
+              shells={element.shells}
               show={show}
               setShow={setShow}
             />
