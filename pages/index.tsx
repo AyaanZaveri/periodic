@@ -40,7 +40,12 @@ const Home = () => {
         <h1 className="col-start-2 m-8 grid place-content-center text-3xl font-semibold text-slate-600 dark:text-white">
           Periodic Table of Elements
         </h1>
-        <button className="col-start-3 grid place-content-center">
+        <button
+          className="col-start-3 m-8 grid"
+          style={{
+            placeItems: 'center end',
+          }}
+        >
           Toggle Darkmode
         </button>
       </div>
