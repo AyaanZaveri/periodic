@@ -56,9 +56,9 @@ const Element = ({
       <div
         className={`${
           show == symbol ? 'absolute' : 'hidden'
-        } ml-48 h-32 w-96 rounded-sm bg-slate-50 p-2`}
+        } ${categoryFixed} ml-48 h-32 w-96 rounded-sm bg-slate-50 p-2 shadow-md ring-2 ring-offset-2 transition-all`}
       >
-        <span>{name}</span>
+        <span className='font-semibold'>{name}</span>
       </div>
     </>
   )
