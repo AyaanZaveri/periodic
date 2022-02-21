@@ -83,6 +83,9 @@ const Element = ({
             <span className="text-sm font-normal">
               <span className="font-medium">Atomic Mass:</span> {atomic_mass}
             </span>
+            <span className="text-sm font-normal capitalize">
+              <span className="font-medium">Appearance:</span> {appearance}
+            </span>
             <span className="text-sm font-normal">
               <span className="font-medium">Boiling Point:</span> {boil}
             </span>
