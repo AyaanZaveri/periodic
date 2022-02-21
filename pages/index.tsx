@@ -18,15 +18,32 @@ const Home = () => {
     elements()
   }, [])
 
+  if (typeof window !== 'undefined') {
+    if (
+      localStorage.getItem('theme') === 'dark' ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }
+
   console.log(elementData)
 
-  const [show, setShow] = useState("none")
+  const [show, setShow] = useState('none')
 
   return (
     <div className="grid place-items-center">
-      <h1 className="m-8 text-3xl font-semibold text-slate-600">
-        Periodic Table of Elements
-      </h1>
+      <div className="grid w-full grid-flow-col grid-cols-3">
+        <h1 className="col-start-2 m-8 grid place-content-center text-3xl font-semibold text-slate-600 dark:text-white">
+          Periodic Table of Elements
+        </h1>
+        <button className="col-start-3 grid place-content-center">
+          Toggle Darkmode
+        </button>
+      </div>
       <div className="grid grid-flow-col gap-5 text-xl">
         <button
           onClick={() =>
