@@ -45,3 +45,15 @@
 .unknown {
   @apply bg-gray-100 text-gray-600 shadow-gray-300 ring-gray-400 hover:ring-gray-600;
 }
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+::-webkit-scrollbar-track {
+    background: #d9d9d9;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #a0a0a0;
+    border-radius: 10px;
+}
