@@ -15,6 +15,7 @@ const Element = ({
   melt,
   molar_heat,
   shells,
+  appearance,
   show,
   setShow,
 }: {
@@ -32,6 +33,7 @@ const Element = ({
   melt: number
   molar_heat: number
   shells: number[]
+  appearance: string
   show: string
   setShow: (show: string) => void
 }) => {
@@ -68,14 +70,14 @@ const Element = ({
       <div
         className={`${
           show == symbol ? 'absolute' : 'hidden'
-        } ${categoryFixed} ml-48 h-48 w-96 rounded-sm bg-slate-50 p-2 shadow-md ring-2 ring-offset-2 transition-all overflow-y-scroll`}
+        } ${categoryFixed} ml-48 h-48 w-96 overflow-y-scroll rounded-sm bg-slate-50 p-2 shadow-md ring-2 ring-offset-2 transition-all`}
       >
         <div className="grid grid-flow-col justify-between">
           <div className="grid grid-flow-row place-content-start">
             <span className="text-3xl font-semibold">{symbol}</span>
             <span className="font-normal">{name}</span>
             <span className="font-medium capitalize">{category}</span>
-            <span className='text-sm mt-2'>{summary}</span>
+            <span className="mt-2 text-sm">{summary}</span>
           </div>
           <div className="grid grid-flow-row place-content-start text-right">
             <span className="text-sm font-normal">

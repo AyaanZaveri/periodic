@@ -191,6 +191,7 @@ const Home = () => {
               melt={element.melt}
               molar_heat={element.molar_heat}
               shells={element.shells}
+              appearance={element.appearance}
               show={show}
               setShow={setShow}
             />
