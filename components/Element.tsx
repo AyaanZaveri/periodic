@@ -58,7 +58,13 @@ const Element = ({
           show == symbol ? 'absolute' : 'hidden'
         } ${categoryFixed} ml-48 h-32 w-96 rounded-sm bg-slate-50 p-2 shadow-md ring-2 ring-offset-2 transition-all`}
       >
-        <span className='font-semibold'>{name}</span>
+        <div className='grid grid-flow-col'>
+          <div className="grid grid-flow-row">
+            <span className="text-3xl font-semibold">{symbol}</span>
+            <span className="font-normal">{name}</span>
+            <span className="grid text-lg font-medium">{number}</span>
+          </div>
+        </div>
       </div>
     </>
   )
