@@ -20,6 +20,8 @@ const Home = () => {
 
   console.log(elementData)
 
+  const [show, setShow] = useState("none")
+
   return (
     <div className="grid place-items-center">
       <h1 className="m-8 text-3xl font-semibold text-slate-600">
@@ -32,7 +34,7 @@ const Home = () => {
               showElement !== 'diatomic-nonmetal' ? 'diatomic-nonmetal' : 'all'
             )
           }
-          className={`font-medium text-lg ${
+          className={`text-lg font-medium ${
             showElement == 'diatomic-nonmetal'
               ? 'rounded bg-blue-500 p-2 text-white'
               : 'text-blue-500'
@@ -46,7 +48,7 @@ const Home = () => {
               showElement !== 'alkali-metal' ? 'alkali-metal' : 'all'
             )
           }
-          className={`font-medium text-lg ${
+          className={`text-lg font-medium ${
             showElement == 'alkali-metal'
               ? 'rounded bg-cyan-500 p-2 text-white'
               : 'text-cyan-500'
@@ -62,7 +64,7 @@ const Home = () => {
                 : 'all'
             )
           }
-          className={`font-medium text-lg ${
+          className={`text-lg font-medium ${
             showElement == 'alkaline-earth-metal'
               ? 'rounded bg-green-500 p-2 text-white'
               : 'text-green-500'
@@ -76,7 +78,7 @@ const Home = () => {
               showElement !== 'transition-metal' ? 'transition-metal' : 'all'
             )
           }
-          className={`font-medium text-lg ${
+          className={`text-lg font-medium ${
             showElement == 'transition-metal'
               ? 'rounded bg-orange-500 p-2 text-white'
               : 'text-orange-500'
@@ -92,7 +94,7 @@ const Home = () => {
                 : 'all'
             )
           }
-          className={`font-medium text-lg ${
+          className={`text-lg font-medium ${
             showElement == 'post-transition-metal'
               ? 'rounded bg-red-500 p-2 text-white'
               : 'text-red-500'
@@ -104,7 +106,7 @@ const Home = () => {
           onClick={() =>
             setShowElement(showElement !== 'metalloid' ? 'metalloid' : 'all')
           }
-          className={`font-medium text-lg text-lg ${
+          className={`text-lg text-lg font-medium ${
             showElement == 'metalloid'
               ? 'rounded bg-yellow-500 p-2 text-white'
               : 'text-yellow-500'
@@ -120,7 +122,7 @@ const Home = () => {
                 : 'all'
             )
           }
-          className={`font-medium text-lg ${
+          className={`text-lg font-medium ${
             showElement == 'polyatomic-nonmetal'
               ? 'rounded bg-purple-500 p-2 text-white'
               : 'text-purple-500'
@@ -132,7 +134,7 @@ const Home = () => {
           onClick={() =>
             setShowElement(showElement !== 'noble-gas' ? 'noble-gas' : 'all')
           }
-          className={`font-medium text-lg ${
+          className={`text-lg font-medium ${
             showElement == 'noble-gas'
               ? 'rounded bg-pink-500 p-2 text-white'
               : 'text-pink-500'
@@ -144,7 +146,7 @@ const Home = () => {
           onClick={() =>
             setShowElement(showElement !== 'lanthanide' ? 'lanthanide' : 'all')
           }
-          className={`font-medium text-lg ${
+          className={`text-lg font-medium ${
             showElement == 'lanthanide'
               ? 'rounded bg-indigo-500 p-2 text-white'
               : 'text-indigo-500'
@@ -156,7 +158,7 @@ const Home = () => {
           onClick={() =>
             setShowElement(showElement !== 'actinide' ? 'actinide' : 'all')
           }
-          className={`font-medium text-lg ${
+          className={`text-lg font-medium ${
             showElement == 'actinide'
               ? 'rounded bg-teal-500 p-2 text-white'
               : 'text-teal-500'
@@ -183,6 +185,8 @@ const Home = () => {
               ypos={element.ypos}
               summary={element.summary}
               showElement={showElement}
+              show={show}
+              setShow={setShow}
             />
           ))}
         </div>

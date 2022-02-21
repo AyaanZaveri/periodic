@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Element = ({
   number,
@@ -9,6 +9,8 @@ const Element = ({
   ypos,
   summary,
   showElement,
+  show,
+  setShow,
 }: {
   number: number
   symbol: string
@@ -18,34 +20,47 @@ const Element = ({
   ypos: number
   summary: string
   showElement: string
+  show: string
+  setShow: (show: string) => void
 }) => {
   const categoryFixed = category.replace(/\s/g, '-').replace(/,/g, ' ')
+
   return (
-    <div
-      id={name}
-      className={`grid ${
-        showElement == 'all'
-          ? categoryFixed
-          : showElement == categoryFixed
-          ? categoryFixed
-          : 'unknown'
-      } h-16 w-16 cursor-pointer grid-rows-3 rounded-sm px-1 shadow-2xl ring-2 ring-offset-2 transition-all`}
-      style={{
-        gridColumn: xpos,
-        gridRow: ypos,
-      }}
-    >
-      <span className="text-sm">{number}</span>
-      <span className="grid place-content-center text-2xl">{symbol}</span>
-      <span
-        className="m-0.5 grid text-[0.5rem]"
+    <>
+      <div
+        id={name}
+        className={`grid ${
+          showElement == 'all'
+            ? categoryFixed
+            : showElement == categoryFixed
+            ? categoryFixed
+            : 'unknown'
+        } h-16 w-16 cursor-pointer grid-rows-3 rounded-sm px-1 shadow-2xl ring-2 ring-offset-2 transition-all`}
         style={{
-          placeItems: 'end start',
+          gridColumn: xpos,
+          gridRow: ypos,
         }}
+        onClick={() => setShow(show == symbol ? 'none' : symbol)}
       >
-        {name}
-      </span>
-    </div>
+        <span className="text-sm">{number}</span>
+        <span className="grid place-content-center text-2xl">{symbol}</span>
+        <span
+          className="m-0.5 grid text-[0.5rem]"
+          style={{
+            placeItems: 'end start',
+          }}
+        >
+          {name}
+        </span>
+      </div>
+      <div
+        className={`${
+          show == symbol ? 'absolute' : 'hidden'
+        } ml-48 h-32 w-96 rounded-sm bg-slate-50 p-2`}
+      >
+        <span>{name}</span>
+      </div>
+    </>
   )
 }
 
