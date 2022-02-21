@@ -5,6 +5,7 @@ import axios from 'axios'
 const Home = () => {
   const [elementData, setElementData] = useState<any>(null)
   const [showElement, setShowElement] = useState<string>('all')
+  const [darkMode, setDarkMode] = useState<boolean>(false)
 
   const elements = () => {
     axios
@@ -18,17 +19,29 @@ const Home = () => {
     elements()
   }, [])
 
-  if (typeof window !== 'undefined') {
-    if (
-      localStorage.getItem('theme') === 'dark' ||
-      (!('theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-      document.documentElement.classList.add('dark')
+  const checkDarkMode = () => {
+    setDarkMode(!darkMode)
+
+    if (darkMode) {
+      localStorage.setItem('theme', 'dark')
     } else {
-      document.documentElement.classList.remove('dark')
+      localStorage.setItem('theme', 'light')
     }
   }
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if (
+        localStorage.getItem('theme') === 'dark' ||
+        (!('theme' in localStorage) &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    }
+  }, [darkMode])
 
   console.log(elementData)
 
@@ -42,6 +55,7 @@ const Home = () => {
         </h1>
         <button
           className="col-start-3 m-8 grid"
+          onClick={() => checkDarkMode()}
           style={{
             placeItems: 'center end',
           }}
