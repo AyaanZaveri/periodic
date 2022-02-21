@@ -70,7 +70,7 @@ const Element = ({
       <div
         className={`${
           show == symbol ? 'absolute' : 'hidden'
-        } ${categoryFixed} ml-48 h-48 w-96 overflow-y-scroll rounded-sm bg-slate-50 p-2 shadow-md ring-2 ring-offset-2 transition-all`}
+        } ${categoryFixed} ml-48 h-48 w-[28rem] overflow-y-scroll rounded-sm bg-slate-50 p-2 shadow-md ring-2 ring-offset-2 transition-all`}
       >
         <div className="grid grid-flow-col justify-between">
           <div className="grid grid-flow-row place-content-start">
