@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Element from '../components/Element'
 import axios from 'axios'
+import { HiOutlineSun, HiOutlineMoon } from 'react-icons/hi'
 
 const Home = () => {
   const [elementData, setElementData] = useState<any>(null)
@@ -60,7 +61,11 @@ const Home = () => {
             placeItems: 'center end',
           }}
         >
-          Toggle Darkmode
+          {darkMode ? (
+            <HiOutlineMoon className="h-8 w-8 text-slate-600" />
+          ) : (
+            <HiOutlineSun className="h-8 w-8 text-white" />
+          )}
         </button>
       </div>
       <div className="grid grid-flow-col gap-5 text-xl">
