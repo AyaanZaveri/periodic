@@ -87,6 +87,9 @@ const Element = ({
               <span className="font-medium">Atomic Mass:</span> {atomic_mass}
             </span>
             <span className="text-sm font-normal">
+              <span className="font-medium">Atomic Number:</span> {number}
+            </span>
+            <span className="text-sm font-normal">
               <span className="font-medium">Boiling Point:</span> {boil}
             </span>
             <span className="text-sm font-normal">
@@ -99,7 +102,7 @@ const Element = ({
               <span className="font-medium">Molar Heat:</span> {molar_heat}
             </span>
             <span className="text-sm font-normal">
-              <span className="font-medium">Number of Shells:</span>{' '}
+              <span className="font-medium">Shells:</span>{' '}
               {shells.join(',')}
             </span>
           </div>
