@@ -80,11 +80,11 @@ const Element = ({
             <span className="mt-2 text-sm">{summary}</span>
           </div>
           <div className="grid grid-flow-row place-content-start text-right">
-            <span className="text-sm font-normal">
-              <span className="font-medium">Atomic Mass:</span> {atomic_mass}
-            </span>
             <span className="text-sm font-normal capitalize">
               <span className="font-medium">Appearance:</span> {appearance}
+            </span>
+            <span className="text-sm font-normal">
+              <span className="font-medium">Atomic Mass:</span> {atomic_mass}
             </span>
             <span className="text-sm font-normal">
               <span className="font-medium">Boiling Point:</span> {boil}
